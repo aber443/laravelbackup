@@ -1,0 +1,2150 @@
+/* =========================================
+
+   TinyGuide - Dashboard Design
+
+   Clean & Organized Admin Dashboard
+
+========================================= */
+
+
+
+:root {
+
+    --dashboard-primary: #64C7C4;
+
+    --dashboard-primary-light: #E8F7F6;
+
+    --dashboard-text: #2C4A5A;
+
+    --dashboard-muted: #8AA1AA;
+
+    --dashboard-background: #F1F8F8;
+
+    --dashboard-border: #E2EEEE;
+
+    --dashboard-white: #FFFFFF;
+
+    --dashboard-orange: #E9B878;
+
+    --dashboard-green: #239A70;
+
+    --dashboard-red: #D46A6A;
+
+    --dashboard-purple: #9275C7;
+
+    --dashboard-shadow: 0 3px 14px rgba(44, 74, 90, 0.045);
+
+}
+
+
+
+/* =========================================
+
+   General
+
+========================================= */
+
+
+
+.dashboard > .main-content {
+
+    font-family: Arial, sans-serif;
+
+    color: var(--dashboard-text);
+
+    background: var(--dashboard-background);
+
+}
+
+
+
+.dashboard > .main-content * {
+
+    box-sizing: border-box;
+
+}
+
+
+
+.dashboard-header,
+
+.dashboard-panel,
+
+.stat-card {
+
+    min-width: 0;
+
+}
+
+
+
+/* =========================================
+
+   Welcome Header
+
+========================================= */
+
+
+
+.dashboard-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+
+
+    background: var(--dashboard-white);
+
+    padding: 22px 24px;
+
+
+
+    border-radius: 15px;
+
+    margin-bottom: 16px;
+
+
+
+    box-shadow: var(--dashboard-shadow);
+
+}
+
+
+
+.dashboard-header h1 {
+
+    font-size: 21px;
+
+    margin: 0 0 8px;
+
+    font-weight: bold;
+
+}
+
+
+
+.dashboard-header p {
+
+    color: var(--dashboard-muted);
+
+    font-size: 12px;
+
+    margin: 0;
+
+    line-height: 1.7;
+
+}
+
+
+
+.dashboard-date {
+
+    background: var(--dashboard-primary-light);
+
+    color: var(--dashboard-text);
+
+
+
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+}
+
+
+
+/* =========================================
+
+   Panels
+
+========================================= */
+
+
+
+.dashboard-panel {
+
+    background: var(--dashboard-white);
+
+    border-radius: 14px;
+
+    padding: 19px;
+
+
+
+    box-shadow: var(--dashboard-shadow);
+
+    min-width: 0;
+
+}
+
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 12px;
+
+
+
+    margin-bottom: 17px;
+
+}
+
+
+
+.section-heading h2,
+
+.dashboard-filter h3 {
+
+    font-size: 15px;
+
+    margin: 0 0 6px;
+
+    color: var(--dashboard-text);
+
+}
+
+
+
+.section-heading p,
+
+.dashboard-panel p {
+
+    color: var(--dashboard-muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+}
+
+
+
+/* =========================================
+
+   Period Filter
+
+========================================= */
+
+
+
+.filter-panel {
+
+    margin-bottom: 16px;
+
+}
+
+
+
+.dashboard-filter {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.dashboard-filter h3 {
+
+    font-size: 15px;
+
+}
+
+
+
+.filter-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+
+.filter-controls select,
+
+.custom-date-fields input {
+
+    padding: 9px 12px;
+
+
+
+    border: 1px solid var(--dashboard-border);
+
+    border-radius: 8px;
+
+
+
+    background: #F8FBFB;
+
+    color: var(--dashboard-text);
+
+
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    outline: none;
+
+}
+
+
+
+.filter-controls select:focus,
+
+.custom-date-fields input:focus {
+
+    border-color: var(--dashboard-primary);
+
+}
+
+
+
+.filter-controls button,
+
+.custom-date-fields button {
+
+    border: none;
+
+    background: var(--dashboard-primary);
+
+    color: white;
+
+
+
+    padding: 9px 17px;
+
+    border-radius: 8px;
+
+
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+}
+
+
+
+.filter-controls button:hover,
+
+.custom-date-fields button:hover {
+
+    background: #4EB5B2;
+
+}
+
+
+
+.custom-date-fields {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+
+
+    width: 100%;
+
+    margin-top: 12px;
+
+}
+
+
+
+.custom-date-fields label {
+
+    font-size: 12px;
+
+    color: var(--dashboard-muted);
+
+}
+
+
+
+.period-description {
+
+    margin-top: 12px;
+
+    padding-top: 11px;
+
+
+
+    border-top: 1px solid var(--dashboard-border);
+
+
+
+    font-size: 11px;
+
+    color: var(--dashboard-muted);
+
+}
+
+
+
+/* =========================================
+
+   Main Statistics Cards
+
+========================================= */
+
+
+
+.dashboard-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.stat-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+
+
+    min-width: 0;
+
+    min-height: 116px;
+
+    padding: 19px 18px;
+
+
+
+    background: var(--dashboard-white);
+
+    border: 1px solid #EDF3F3;
+
+    border-radius: 16px;
+
+    box-shadow: var(--dashboard-shadow);
+
+
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+}
+
+
+
+.stat-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #D8EEEE;
+
+    box-shadow: 0 8px 22px rgba(44, 74, 90, 0.09);
+
+}
+
+
+
+.stat-card:focus-visible {
+
+    outline: 2px solid var(--dashboard-primary);
+
+    outline-offset: 3px;
+
+}
+
+
+
+.stat-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+    text-align: right;
+
+}
+
+
+
+.stat-info p {
+
+    margin: 0 0 7px;
+
+    color: var(--dashboard-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+}
+
+
+
+.stat-info h2 {
+
+    margin: 0 0 6px;
+
+    color: var(--dashboard-text);
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    font-variant-numeric: tabular-nums;
+
+}
+
+
+
+.stat-info > span {
+
+    display: block;
+
+    min-height: 16px;
+
+    color: var(--dashboard-muted);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+
+.stat-separator {
+
+    display: inline !important;
+
+    min-height: 0 !important;
+
+    padding: 0 3px;
+
+}
+
+
+
+.stat-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 52px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+
+}
+
+
+
+.users-icon {
+
+    background: #E8F7F6;
+
+}
+
+
+
+.children-icon {
+
+    background: #FFF4E7;
+
+}
+
+
+
+.notifications-icon {
+
+    background: #EEF1FF;
+
+}
+
+
+
+.reports-icon {
+
+    background: #F4EEFA;
+
+}
+
+
+
+/* =========================================
+
+   Charts Layout
+
+========================================= */
+
+
+
+.dashboard-charts-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+
+
+    margin-bottom: 16px;
+
+}
+
+
+
+.chart-panel {
+
+    min-width: 0;
+
+    margin-bottom: 0;
+
+    overflow: hidden;
+
+}
+
+
+
+.chart-panel .section-heading {
+
+    margin-bottom: 19px;
+
+}
+
+
+
+/* =========================================
+
+   Health Donut Chart
+
+========================================= */
+
+
+
+.health-chart-layout {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+
+
+    min-height: 195px;
+
+}
+
+
+
+.donut-chart {
+
+    width: 155px;
+
+    height: 155px;
+
+    min-width: 155px;
+
+
+
+    border-radius: 50%;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    position: relative;
+
+}
+
+
+
+.donut-chart-center {
+
+    width: 93px;
+
+    height: 93px;
+
+
+
+    border-radius: 50%;
+
+    background: white;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+
+
+    text-align: center;
+
+}
+
+
+
+.donut-chart-center strong {
+
+    font-size: 20px;
+
+    color: var(--dashboard-text);
+
+}
+
+
+
+.donut-chart-center span {
+
+    font-size: 9px;
+
+    color: var(--dashboard-muted);
+
+    margin-top: 5px;
+
+}
+
+
+
+.health-chart-legend {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+
+.legend-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 8px;
+
+
+
+    font-size: 11px;
+
+}
+
+
+
+.legend-name {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+
+}
+
+
+
+.legend-name i {
+
+    width: 9px;
+
+    height: 9px;
+
+    min-width: 9px;
+
+    border-radius: 50%;
+
+}
+
+
+
+.legend-name span {
+
+    color: var(--dashboard-text);
+
+}
+
+
+
+.legend-value {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+
+.legend-value strong {
+
+    font-size: 11px;
+
+    color: var(--dashboard-text);
+
+}
+
+
+
+.legend-value small {
+
+    color: var(--dashboard-muted);
+
+    font-size: 10px;
+
+}
+
+
+
+/* =========================================
+
+   Registration Growth Chart
+
+========================================= */
+
+
+
+.chart-container {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+
+
+.registration-chart {
+
+    display: block;
+
+    width: 100%;
+
+    height: 190px;
+
+    min-width: 0;
+
+}
+
+
+
+.chart-legend {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+    flex-wrap: wrap;
+
+
+
+    margin-top: 12px;
+
+
+
+    font-size: 11px;
+
+    color: var(--dashboard-muted);
+
+}
+
+
+
+.chart-legend span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+
+.users-dot,
+
+.children-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    background: var(--dashboard-primary);
+
+}
+
+
+
+.children-dot {
+
+    background: var(--dashboard-orange);
+
+}
+
+
+
+/* =========================================
+
+   Latest Updates Layout
+
+========================================= */
+
+
+
+.dashboard-updates-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+
+
+    margin-bottom: 16px;
+
+}
+
+
+
+.updates-panel {
+
+    min-width: 0;
+
+    margin-bottom: 0;
+
+    overflow: hidden;
+
+}
+
+
+
+.view-all {
+
+    text-decoration: none;
+
+    color: var(--dashboard-primary);
+
+
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+}
+
+
+
+.view-all:hover {
+
+    color: #399D9A;
+
+}
+
+
+
+/* =========================================
+
+   Latest Users Table
+
+========================================= */
+
+
+
+.table-responsive {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+
+.dashboard-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: right;
+
+    min-width: 0;
+
+}
+
+
+
+.dashboard-table th {
+
+    background: #F5FAFA;
+
+    color: var(--dashboard-muted);
+
+
+
+    font-size: 11px;
+
+    padding: 12px 9px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+}
+
+
+
+.dashboard-table td {
+
+    padding: 12px 9px;
+
+
+
+    border-bottom: 1px solid #EDF2F2;
+
+
+
+    font-size: 11px;
+
+    vertical-align: middle;
+
+}
+
+
+
+.dashboard-table tbody tr:hover {
+
+    background: #FAFCFC;
+
+}
+
+
+
+.status-badge {
+
+    display: inline-block;
+
+
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+
+.status-badge.active {
+
+    background: #EAF7F1;
+
+    color: var(--dashboard-green);
+
+}
+
+
+
+.status-badge.inactive {
+
+    background: #FFF0F0;
+
+    color: var(--dashboard-red);
+
+}
+
+
+
+.action-button {
+
+    border: none;
+
+    border-radius: 7px;
+
+
+
+    padding: 6px 9px;
+
+
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+}
+
+
+
+.disable-button {
+
+    background: #FFF0F0;
+
+    color: var(--dashboard-red);
+
+}
+
+
+
+.enable-button {
+
+    background: #EAF7F1;
+
+    color: var(--dashboard-green);
+
+}
+
+
+
+.disable-button:hover {
+
+    background: #FCE0E0;
+
+}
+
+
+
+.enable-button:hover {
+
+    background: #D8F0E5;
+
+}
+
+
+
+/* =========================================
+
+   Latest Notifications
+
+========================================= */
+
+
+
+.notification-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.notification-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #EDF2F2;
+
+
+
+    min-width: 0;
+
+}
+
+
+
+.notification-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+.notification-icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    min-width: 36px;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    border-radius: 10px;
+
+    background: var(--dashboard-primary-light);
+
+
+
+    font-size: 17px;
+
+}
+
+
+
+.notification-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+
+.notification-content strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: var(--dashboard-text);
+
+}
+
+
+
+.notification-content p {
+
+    margin: 5px 0;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+
+
+    overflow-wrap: anywhere;
+
+}
+
+
+
+.notification-content small {
+
+    display: block;
+
+    margin-top: 4px;
+
+
+
+    color: var(--dashboard-muted);
+
+    font-size: 9px;
+
+}
+
+
+
+/* =========================================
+
+   Empty State
+
+========================================= */
+
+
+
+.empty-state {
+
+    text-align: center;
+
+
+
+    padding: 22px 12px;
+
+
+
+    color: var(--dashboard-muted);
+
+    font-size: 12px;
+
+
+
+    background: #F8FBFB;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* =========================================
+
+   Old Components Compatibility
+
+========================================= */
+
+
+
+.status-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+
+.status-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+
+    padding: 16px;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+
+}
+
+
+
+.status-item strong {
+
+    font-size: 21px;
+
+}
+
+
+
+.active-status {
+
+    background: #EAF7F1;
+
+    color: var(--dashboard-green);
+
+}
+
+
+
+.inactive-status {
+
+    background: #FFF0F0;
+
+    color: var(--dashboard-red);
+
+}
+
+
+
+.health-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+}
+
+
+
+.health-stat-item {
+
+    background: #F8FBFB;
+
+    border: 1px solid #EDF3F3;
+
+    border-radius: 11px;
+
+    padding: 15px;
+
+}
+
+
+
+.health-stat-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+
+}
+
+
+
+.health-stat-heading strong {
+
+    font-size: 18px;
+
+}
+
+
+
+.health-progress {
+
+    height: 8px;
+
+    background: #E7EFEF;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.health-progress-fill {
+
+    height: 100%;
+
+    background: var(--dashboard-primary);
+
+    border-radius: 20px;
+
+}
+
+
+
+.health-stat-item small {
+
+    font-size: 10px;
+
+    color: var(--dashboard-muted);
+
+}
+
+
+
+/* =========================================
+
+   Responsive Design
+
+========================================= */
+
+
+
+@media (max-width: 1100px) {
+
+
+
+    .dashboard-cards {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .stat-card {
+
+        min-height: 112px;
+
+    }
+
+
+
+    .health-chart-layout {
+
+        gap: 12px;
+
+    }
+
+
+
+    .donut-chart {
+
+        width: 125px;
+
+        height: 125px;
+
+        min-width: 125px;
+
+    }
+
+
+
+    .donut-chart-center {
+
+        width: 78px;
+
+        height: 78px;
+
+    }
+
+
+
+}
+
+
+
+@media (max-width: 850px) {
+
+
+
+    .dashboard-charts-grid,
+
+    .dashboard-updates-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .chart-panel,
+
+    .updates-panel {
+
+        width: 100%;
+
+    }
+
+
+
+}
+
+
+
+@media (max-width: 700px) {
+
+
+
+    .dashboard-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 18px;
+
+    }
+
+
+
+    .dashboard-header h1 {
+
+        font-size: 19px;
+
+    }
+
+
+
+    .dashboard-panel {
+
+        padding: 15px;
+
+    }
+
+
+
+    .dashboard-filter {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+
+    .filter-controls {
+
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .custom-date-fields {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+
+    .custom-date-fields label,
+
+    .custom-date-fields input {
+
+        width: 100%;
+
+    }
+
+
+
+    .health-chart-layout {
+
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .health-chart-legend {
+
+        width: 100%;
+
+    }
+
+
+
+    .notification-item {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .dashboard-table {
+
+        min-width: 500px;
+
+    }
+
+
+
+}
+
+
+
+@media (max-width: 420px) {
+
+
+
+    .dashboard-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .stat-card {
+
+        min-height: 104px;
+
+        padding: 15px;
+
+    }
+
+
+
+    .stat-icon {
+
+        flex-basis: 46px;
+
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 22px;
+
+    }
+
+
+
+    .stat-info h2 {
+
+        font-size: 25px;
+
+    }
+
+
+
+    .filter-controls select,
+
+    .filter-controls button {
+
+        width: 100%;
+
+    }
+
+
+
+    .dashboard-panel {
+
+        padding: 13px;
+
+    }
+
+
+
+    .registration-chart {
+
+        height: 160px;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =========================================
+
+   Compact Welcome Header - TinyGuide
+
+   Fix SVG default sizing and align header items
+
+========================================= */
+
+
+
+.dashboard-header {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 104px;
+
+    padding: 16px 22px;
+
+    margin-bottom: 16px;
+
+}
+
+
+
+.dashboard-welcome {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+}
+
+
+
+.dashboard-welcome-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 14px;
+
+    background: var(--dashboard-primary-light);
+
+}
+
+
+
+.dashboard-welcome-logo svg {
+
+    display: block;
+
+    width: 32px;
+
+    height: 32px;
+
+    max-width: 100%;
+
+}
+
+
+
+.dashboard-welcome-text {
+
+    min-width: 0;
+
+}
+
+
+
+.dashboard-welcome-text h1 {
+
+    margin: 0 0 5px;
+
+    color: var(--dashboard-text);
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    font-weight: bold;
+
+}
+
+
+
+.dashboard-welcome-text p {
+
+    margin: 0;
+
+    color: var(--dashboard-muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+.dashboard-header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+}
+
+
+
+.dashboard-notifications {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+
+    border-radius: 12px;
+
+    background: #F3EEFA;
+
+    color: var(--dashboard-purple);
+
+    text-decoration: none;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
+
+
+.dashboard-notifications:hover {
+
+    background: #E9DFF5;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.dashboard-notifications svg {
+
+    display: block;
+
+    width: 23px;
+
+    height: 23px;
+
+}
+
+
+
+.dashboard-date {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    background: var(--dashboard-primary-light);
+
+    color: var(--dashboard-text);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .dashboard-header {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 14px;
+
+        padding: 16px;
+
+    }
+
+
+
+    .dashboard-welcome-text h1 {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .dashboard-welcome-text p {
+
+        font-size: 11px;
+
+    }
+
+
+
+    .dashboard-header-actions {
+
+        margin-right: auto;
+
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+
+    .dashboard-header {
+
+        align-items: flex-start;
+
+    }
+
+
+
+    .dashboard-welcome-logo {
+
+        width: 42px;
+
+        height: 42px;
+
+        min-width: 42px;
+
+    }
+
+
+
+    .dashboard-welcome-logo svg {
+
+        width: 28px;
+
+        height: 28px;
+
+    }
+
+
+
+    .dashboard-welcome-text h1 {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .dashboard-header-actions {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        margin-right: 0;
+
+    }
+
+}
+
+/* =========================================
+   Stronger Card Emphasis - TinyGuide Dashboard
+   ========================================= */
+.dashboard-header,
+.dashboard-panel,
+.stat-card {
+    border: 2px solid #A8DAD7;
+    box-shadow:
+        0 7px 20px rgba(44, 74, 90, 0.13),
+        0 2px 5px rgba(100, 199, 196, 0.10);
+}
+
+.stat-card:hover {
+    border-color: #64C7C4;
+    box-shadow:
+        0 10px 25px rgba(44, 74, 90, 0.17),
+        0 3px 8px rgba(100, 199, 196, 0.14);
+}

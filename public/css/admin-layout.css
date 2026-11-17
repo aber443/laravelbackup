@@ -1,0 +1,233 @@
+/* TinyGuide - Unified Admin Layout */
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    --sidebar-width: 250px;
+    --primary-color: #64C7C4;
+    --text-color: #2C4A5A;
+    --background-color: #F1F8F8;
+    --admin-font: 'Tajawal', Arial, sans-serif;
+}
+
+/* التخطيط العام */
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: var(--background-color);
+    font-family: var(--admin-font);
+}
+
+/* توحيد الخط داخل لوحة الإدارة */
+
+.dashboard,
+.dashboard > .sidebar,
+.dashboard > .main-content,
+.dashboard > .sidebar .menu a,
+.dashboard :where(
+    h1, h2, h3, h4, h5, h6,
+    p, span, a, label, small, strong, time, summary,
+    li, dt, dd, caption, th, td,
+    button, input, select, textarea, option,
+    svg text
+) {
+    font-family: var(--admin-font) !important;
+}
+
+/* حاوية لوحة التحكم */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* الشريط الجانبي */
+
+.dashboard > .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    max-width: var(--sidebar-width);
+
+    height: 100vh;
+    height: 100dvh;
+
+    background: #ffffff;
+    padding: 30px 20px;
+    border-left: 1px solid #E2EEEE;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    z-index: 1000;
+    flex-shrink: 0;
+}
+
+/* الشعار */
+
+.dashboard > .sidebar .logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.dashboard > .sidebar .logo h2 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.dashboard > .sidebar .logo p {
+    color: #8AA1AA;
+    font-size: 14px;
+}
+
+/* القائمة */
+
+.dashboard > .sidebar .menu {
+    display: block;
+}
+
+.dashboard > .sidebar .menu a {
+    display: block;
+
+    text-decoration: none;
+    color: var(--text-color);
+
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: normal;
+    text-align: right;
+
+    transition: background 0.3s, color 0.3s;
+}
+
+.dashboard > .sidebar .menu a:hover,
+.dashboard > .sidebar .menu a.active {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+/* المحتوى الرئيسي */
+
+.dashboard > .main-content {
+    flex: 1;
+    min-width: 0;
+    margin-right: var(--sidebar-width);
+
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 30px;
+}
+
+/* الشاشات الصغيرة */
+
+@media (max-width: 700px) {
+    .dashboard {
+        display: block;
+    }
+
+    .dashboard > .sidebar {
+        position: relative;
+        top: auto;
+        right: auto;
+
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+
+        height: auto;
+        padding: 20px;
+
+        border-left: none;
+        border-bottom: 1px solid #E2EEEE;
+
+        overflow: visible;
+    }
+
+    .dashboard > .sidebar .logo {
+        margin-bottom: 20px;
+    }
+
+    .dashboard > .sidebar .menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .dashboard > .sidebar .menu a {
+        margin-bottom: 0;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .dashboard > .main-content {
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+
+        overflow: visible;
+        padding: 15px;
+    }
+}
+
+/* الشاشات الصغيرة جدًا */
+
+@media (max-width: 420px) {
+    .dashboard > .sidebar .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard > .main-content {
+        padding: 12px;
+    }
+}
+
+/* توحيد حجم ومسافات الشريط الجانبي على الشاشات الواسعة */
+
+@media (min-width: 701px) {
+    .dashboard > .sidebar {
+        box-sizing: border-box;
+    }
+
+    .dashboard > .sidebar .logo {
+        margin-bottom: 35px !important;
+    }
+
+    .dashboard > .sidebar .menu {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .dashboard > .sidebar .menu a {
+        display: block !important;
+        box-sizing: border-box;
+        padding: 14px 16px !important;
+        margin: 0 0 8px 0 !important;
+        line-height: 20px !important;
+        height: auto !important;
+        min-height: 48px !important;
+        font-size: 15px !important;
+    }
+}
